@@ -59,11 +59,13 @@ GestureDetector Button2(VoidCallback funcion, Color bgColor, String texto) {
     onTap: funcion,
     child: Container(
       width: 180,
-      height: 40,
+      height: 20,
       child: Center(
           child: Text(texto,
-              style:
-                  TextStyle(fontFamily: 'Khand', fontWeight: FontWeight.bold))),
+              style: TextStyle(
+                  fontFamily: 'Khand',
+                  fontWeight: FontWeight.bold,
+                  color: bgColor))),
     ),
   );
 }

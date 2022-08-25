@@ -27,6 +27,7 @@ flutter:
      - assets/menu.png
      - assets/reserva.png
      - assets/sedes.png
+     - assets/hamburguesa.jpg
 
   fonts:
      - family: Khand
