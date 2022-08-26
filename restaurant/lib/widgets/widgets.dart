@@ -9,6 +9,7 @@ Text titulo(String texto, double size) {
       fontWeight: FontWeight.bold,
       fontSize: size,
     ),
+    textAlign: TextAlign.center,
   );
 }
 

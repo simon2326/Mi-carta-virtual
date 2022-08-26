@@ -40,6 +40,7 @@ class Order extends StatelessWidget {
               SizedBox(
                 width: screenW * 0.6,
                 child: TextField(
+                  readOnly: true,
                   decoration: InputDecoration(
                     hintText: "Producto 1",
                   ),
@@ -49,23 +50,23 @@ class Order extends StatelessWidget {
               SizedBox(
                 width: screenW * 0.6,
                 child: TextField(
+                  readOnly: true,
                   decoration: InputDecoration(
                     hintText: "Producto 2",
                   ),
                 ),
               ),
-              //titulo(".\n.\n.", 15),
               titulo("Producto n", 15),
               SizedBox(
                 width: screenW * 0.6,
                 child: TextField(
+                  readOnly: true,
                   decoration: InputDecoration(
                     hintText: "Producto n",
                   ),
                 ),
               ),
               Spacer(flex: 1),
-
               Button(() {
                 ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(content: titulo("Pedido pagado con éxito", 20)));
@@ -73,6 +74,18 @@ class Order extends StatelessWidget {
                   30),
               Spacer(flex: 1),
             ],
+          ),
+        ),
+      ),
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(50.0),
+        child: AppBar(
+          title: titulo("ORDEN", 20),
+          backgroundColor: Color(0xFFF007A78),
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back_ios_new),
+            color: Colors.black,
+            onPressed: () => Navigator.pop(context, true),
           ),
         ),
       ),

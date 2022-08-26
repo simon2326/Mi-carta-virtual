@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:restaurant/vistas/loginPage.dart';
 import 'package:restaurant/vistas/menu.dart';
+import 'package:restaurant/vistas/reservas.dart';
+import 'package:restaurant/vistas/sedes.dart';
 import 'package:restaurant/widgets/widgets.dart';
 
 class MainPage extends StatelessWidget {
@@ -37,15 +39,43 @@ class MainPage extends StatelessWidget {
                   },
                 ),
               );
-            }, "assets/menu.png", 150),
+            }, "assets/menu.png", 140),
             titulo("Carta virtual", 25),
             Spacer(flex: 1),
-            ImgButton(() {}, "assets/reserva.png", 140),
+            ImgButton(() {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return Reservas();
+                  },
+                ),
+              );
+            }, "assets/reserva.png", 130),
             titulo("Reservar", 25),
             Spacer(flex: 1),
-            ImgButton(() {}, "assets/sedes.png", 180),
+            ImgButton(() {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) {
+                  return Sedes();
+                }),
+              );
+            }, "assets/sedes.png", 160),
             titulo("Nuestras sedes", 25),
           ]),
+        ),
+      ),
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(50.0),
+        child: AppBar(
+          title: titulo("PÁGINA PRINCIPAL - IFOOD", 20),
+          backgroundColor: Color(0xFFF007A78),
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back_ios_new),
+            color: Colors.black,
+            onPressed: () => Navigator.pop(context, true),
+          ),
         ),
       ),
     );

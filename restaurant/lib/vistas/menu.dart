@@ -19,7 +19,7 @@ class Menu extends StatelessWidget {
       body: Column(
         children: [
           Container(
-            height: 150,
+            height: 120,
             decoration: BoxDecoration(
               borderRadius:
                   BorderRadius.only(bottomRight: Radius.elliptical(50, 50)),
@@ -28,11 +28,11 @@ class Menu extends StatelessWidget {
             child: Stack(
               children: [
                 Positioned(
-                  top: 55,
+                  top: 15,
                   left: 0,
                   child: Container(
                     height: 70,
-                    width: 300,
+                    width: 320,
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.only(
@@ -43,7 +43,7 @@ class Menu extends StatelessWidget {
                   ),
                 ),
                 Positioned(
-                    top: 64, left: 15, child: titulo("MI CARTA VIRTUAL", 45)),
+                    top: 20, left: 10, child: titulo("MI CARTA VIRTUAL", 45)),
               ],
             ),
           ),
@@ -280,7 +280,7 @@ class Menu extends StatelessWidget {
                 Spacer(flex: 1),
                 Column(
                   children: [
-                    titulo("Productos", 20),
+                    titulo("Productos", 15),
                     subtitulo("producto 1", 10),
                     subtitulo("producto 3", 10),
                     subtitulo("producto 3", 10),
@@ -309,6 +309,18 @@ class Menu extends StatelessWidget {
             ),
           ),
         ],
+      ),
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(50.0),
+        child: AppBar(
+          title: titulo("CARTA VIRTUAL", 20),
+          backgroundColor: Color(0xFFF007A78),
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back_ios_new),
+            color: Colors.black,
+            onPressed: () => Navigator.pop(context, true),
+          ),
+        ),
       ),
     );
   }

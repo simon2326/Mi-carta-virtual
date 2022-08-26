@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:restaurant/vistas/mainPage.dart';
+import 'package:restaurant/vistas/sedes.dart';
 import 'package:restaurant/widgets/widgets.dart';
 
 class LoginPage extends StatelessWidget {
@@ -56,7 +57,18 @@ class LoginPage extends StatelessWidget {
               ),
             );
           }, Color(0xFFE3E0D2), "Ir al restaurante", screenW * 0.6, 50),
-          Spacer(flex: 2),
+          Spacer(flex: 1),
+          Button(() {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) {
+                  return Sedes();
+                },
+              ),
+            );
+          }, Color(0xFF7697AB), "Ver sedes", screenW * 0.25, 20),
+          Spacer(flex: 1),
           texto("¿No tienes una cuenta?"),
           Button2(() {
             Navigator.push(
@@ -67,7 +79,7 @@ class LoginPage extends StatelessWidget {
                 },
               ),
             );
-          }, Color(0xFFE3E0D2), "Registrate aquí")
+          }, Color(0xFF324048), "Registrate aquí")
         ]),
       ),
     );

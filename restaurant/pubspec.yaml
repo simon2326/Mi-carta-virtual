@@ -29,6 +29,14 @@ flutter:
      - assets/sedes.png
      - assets/hamburguesa.jpg
      - assets/order.png
+     - assets/envigado.png
+     - assets/laureles.png
+     - assets/llanog.png
+     - assets/sanc.png
+     - assets/poblado.png
+     - assets/calendar.png
+     - assets/reserved.png
+
 
   fonts:
      - family: Khand
