@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:restaurant/vistas/order.dart';
 import 'package:restaurant/widgets/widgets.dart';
 import 'package:flutter/src/painting/box_shadow.dart';
 
@@ -276,11 +277,34 @@ class Menu extends StatelessWidget {
             height: screenH * 0.1,
             child: Row(
               children: [
+                Spacer(flex: 1),
                 Column(
                   children: [
-                    titulo("Productos", 10),
+                    titulo("Productos", 20),
+                    subtitulo("producto 1", 10),
+                    subtitulo("producto 3", 10),
+                    subtitulo("producto 3", 10),
                   ],
-                )
+                ),
+                Spacer(flex: 2),
+                Column(
+                  children: [titulo("Costo", 20), subtitulo(r"280.000$", 15)],
+                ),
+                Spacer(flex: 2),
+                Column(
+                  children: [
+                    Spacer(flex: 1),
+                    Button(() {
+                      Navigator.push(context, MaterialPageRoute(
+                        builder: (context) {
+                          return Order();
+                        },
+                      ));
+                    }, Colors.greenAccent, "Ver\n pedido", 100, 50),
+                    Spacer(flex: 1),
+                  ],
+                ),
+                Spacer(flex: 1),
               ],
             ),
           ),

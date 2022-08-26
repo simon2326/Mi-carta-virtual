@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 Text titulo(String texto, double size) {
   return Text(
@@ -47,9 +48,11 @@ GestureDetector Button(VoidCallback funcion, Color bgColor, String texto,
         border: Border.all(width: 1),
       ),
       child: Center(
-          child: Text(texto,
-              style:
-                  TextStyle(fontFamily: 'Khand', fontWeight: FontWeight.bold))),
+          child: Text(
+        texto,
+        style: TextStyle(fontFamily: 'Khand', fontWeight: FontWeight.bold),
+        textAlign: TextAlign.center,
+      )),
     ),
   );
 }
