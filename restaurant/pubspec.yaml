@@ -36,6 +36,9 @@ flutter:
      - assets/poblado.png
      - assets/calendar.png
      - assets/reserved.png
+     - assets/salchipapas.jpg
+     - assets/perro.jpg
+     - assets/chuzo.jpg
 
 
   fonts:

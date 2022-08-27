@@ -105,7 +105,7 @@ class Menu extends StatelessWidget {
                         ),
                         Positioned(
                           top: 50,
-                          left: 206,
+                          left: 210,
                           child: Container(
                             height: 150,
                             width: 190,
@@ -119,7 +119,13 @@ class Menu extends StatelessWidget {
                                 Spacer(flex: 1),
                                 titulo(r"$16.000", 16),
                                 Spacer(flex: 1),
-                                Button2(() {}, Color(0xFF007A78), "Añadir")
+                                Button2(() {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                      SnackBar(
+                                          content: titulo(
+                                              "Hamburguesa añadida al carrito",
+                                              20)));
+                                }, Color(0xFF007A78), "Añadir")
                               ],
                             ),
                           ),
@@ -168,7 +174,7 @@ class Menu extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(10),
                                 image: DecorationImage(
                                   fit: BoxFit.fill,
-                                  image: AssetImage("assets/hamburguesa.jpg"),
+                                  image: AssetImage("perro.jpg"),
                                 ),
                               ),
                             ),
@@ -176,21 +182,27 @@ class Menu extends StatelessWidget {
                         ),
                         Positioned(
                           top: 50,
-                          left: 206,
+                          left: 215,
                           child: Container(
                             height: 150,
                             width: 190,
                             child: Column(
                               children: [
-                                titulo("Hamburguesa", 20),
+                                titulo("Perro Caliente", 20),
                                 Spacer(flex: 1),
                                 subtitulo(
-                                    "Hamburguesa con dos carnes de\n res de 50gr, tocineta, queso \ncheddar, cebolla, salsa de\n tomate y mostaza.",
+                                    "Perro caliente con doble queso \namericano, ensalada gourmet de campo\n y otras verduras,\n salsas al gusto.",
                                     11),
                                 Spacer(flex: 1),
-                                titulo(r"$16.000", 16),
+                                titulo(r"$13.250", 16),
                                 Spacer(flex: 1),
-                                Button2(() {}, Color(0xFF007A78), "Añadir")
+                                Button2(() {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                      SnackBar(
+                                          content: titulo(
+                                              "Perro caliente añadid0 al carrito",
+                                              20)));
+                                }, Color(0xFF007A78), "Añadir")
                               ],
                             ),
                           ),
@@ -239,7 +251,7 @@ class Menu extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(10),
                                 image: DecorationImage(
                                   fit: BoxFit.fill,
-                                  image: AssetImage("assets/hamburguesa.jpg"),
+                                  image: AssetImage("salchipapas.jpg"),
                                 ),
                               ),
                             ),
@@ -253,15 +265,97 @@ class Menu extends StatelessWidget {
                             width: 190,
                             child: Column(
                               children: [
-                                titulo("Hamburguesa", 20),
+                                titulo("Salchipapas", 20),
                                 Spacer(flex: 1),
                                 subtitulo(
-                                    "Hamburguesa con dos carnes de\n res de 50gr, tocineta, queso \ncheddar, cebolla, salsa de\n tomate y mostaza.",
+                                    "Salchipapas de 250 gr, extra grande\n salchicha de res, tocineta, queso \ncheddar, cebolla, salsa de\n tomate y mostaza.",
                                     11),
                                 Spacer(flex: 1),
-                                titulo(r"$16.000", 16),
+                                titulo(r"$15.750", 16),
                                 Spacer(flex: 1),
-                                Button2(() {}, Color(0xFF007A78), "Añadir")
+                                Button2(() {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                      SnackBar(
+                                          content: titulo(
+                                              "Slachipapas añadidas al carrito",
+                                              20)));
+                                }, Color(0xFF007A78), "Añadir")
+                              ],
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                  Container(
+                    height: 230,
+                    child: Stack(
+                      children: [
+                        Positioned(
+                          top: 35,
+                          left: 28,
+                          child: Material(
+                            child: Container(
+                              height: 180,
+                              width: screenW * 0.9,
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(0),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.grey.withOpacity(0.3),
+                                    offset: new Offset(-10, 10),
+                                    blurRadius: 20,
+                                    spreadRadius: 4,
+                                  )
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          top: 0,
+                          left: 30,
+                          child: Card(
+                            elevation: 10,
+                            shadowColor: Colors.grey.withOpacity(0.5),
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(15)),
+                            child: Container(
+                              height: 200,
+                              width: 190,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10),
+                                image: DecorationImage(
+                                  fit: BoxFit.fill,
+                                  image: AssetImage("chuzo.jpg"),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          top: 50,
+                          left: 206,
+                          child: Container(
+                            height: 150,
+                            width: 190,
+                            child: Column(
+                              children: [
+                                titulo("Chuzo", 20),
+                                Spacer(flex: 1),
+                                subtitulo(
+                                    "Chuzo de res gourmet \n  de 550 gr, tocineta, queso \ncheddar, arepa grande, salsa\n bbq y ensalada.",
+                                    11),
+                                Spacer(flex: 1),
+                                titulo(r"$23.350", 16),
+                                Spacer(flex: 1),
+                                Button2(() {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                      SnackBar(
+                                          content: titulo(
+                                              "Chuzo añadido al carrito", 20)));
+                                }, Color(0xFF007A78), "Añadir")
                               ],
                             ),
                           ),
